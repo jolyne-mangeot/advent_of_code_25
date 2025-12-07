@@ -6,14 +6,11 @@
 /*   By: jmangeot <jmangeot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 14:58:34 by jmangeot          #+#    #+#             */
-/*   Updated: 2025/12/06 15:23:19 by jmangeot         ###   ########.fr       */
+/*   Updated: 2025/12/07 12:57:14 by jmangeot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include "../Libft/libft.h"
+#include "../utils/advent_of_code.h"
 
 static int	rot_left(ssize_t *lock_pos, ssize_t move)
 {
