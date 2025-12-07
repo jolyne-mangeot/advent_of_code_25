@@ -6,13 +6,11 @@
 /*   By: jmangeot <jmangeot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 15:19:55 by jmangeot          #+#    #+#             */
-/*   Updated: 2025/12/06 18:27:11 by jmangeot         ###   ########.fr       */
+/*   Updated: 2025/12/07 12:56:57 by jmangeot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Libft/libft.h"
-#include <fcntl.h>
-#include <stdio.h>
+#include "../utils/advent_of_code.h"
 
 static int	high_value_index(char *bank, int len)
 {
@@ -66,11 +64,11 @@ int	main(void)
 		if (!bank)
 			break ;
 		recursive_batt(bank, voltage, 0, 12);
-		printf("bank %d : %llu\n", index, ft_atoll(voltage));
+		ft_printf("bank %d : %llu\n", index, ft_atoll(voltage));
 		count += ft_atoll(voltage);
 		index++;
 		free(bank);
 	}
-	printf("\n\nvoltage : %llu\n", count);
+	ft_printf("\n\nvoltage : %llu\n", count);
 	return (0);
 }

@@ -6,13 +6,11 @@
 /*   By: jmangeot <jmangeot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 13:48:30 by jmangeot          #+#    #+#             */
-/*   Updated: 2025/12/06 15:22:04 by jmangeot         ###   ########.fr       */
+/*   Updated: 2025/12/07 12:57:13 by jmangeot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Libft/libft.h"
-#include <fcntl.h>
-#include <stdio.h>
+#include "../utils/advent_of_code.h"
 
 // ! DOESN'T WORK ! //
 
@@ -66,7 +64,7 @@ int	main(void)
 			if (is_invalid_id(range[0]))
 			{
 				comb += ft_atol(range[0]);
-				printf("%i		%llu \n\n", index, comb);
+				ft_printf("%i		%llu \n\n", index, comb);
 			}
 			if (ft_strncmp(range[0], range[1], ft_strlen(range[1])) == 0)
 				break ;
