@@ -6,7 +6,7 @@
 /*   By: jmangeot <jmangeot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/07 12:54:55 by jmangeot          #+#    #+#             */
-/*   Updated: 2025/12/07 16:10:02 by jmangeot         ###   ########.fr       */
+/*   Updated: 2025/12/09 10:41:54 by jmangeot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ int	main(void)
 		if (temp == count)
 			break ;
 		remove_rolls(matrix);
-		ft_printf("count : %d\n", (int)count);
+		ft_printf("count : %lu\n", count);
 	}
 	free_matrix(matrix);
 	return (0);
