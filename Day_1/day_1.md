@@ -29,7 +29,8 @@ The dial starts by pointing at `50`.
 You could follow the instructions, but your recent required official North Pole secret entrance security training seminar taught you that the safe is actually a decoy. The actual password is the number of times the dial is left pointing at 0 after any rotation in the sequence.
 
 For example, suppose the attached document contained the following rotations:
-```
+
+```m
 L68
 L30
 R48
@@ -41,8 +42,10 @@ L99
 R14
 L82
 ```
+
 Following these rotations would cause the dial to move as follows:
-```
+
+```m
 The dial starts by pointing at		50.
 
 The dial is rotated	L68	to point at	82.
@@ -56,6 +59,7 @@ The dial is rotated	L99	to point at	0.
 The dial is rotated	R14	to point at	14.
 The dial is rotated	L82	to point at	32.
 ```
+
 Because the dial points at `0` a total of three times during this process, the password in this example is `3`.
 
 Analyze the rotations in your attached document. What's the actual password to open the door?

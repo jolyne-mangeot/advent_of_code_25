@@ -12,7 +12,7 @@ The rolls of paper (`@`) are arranged on a large grid; the Elves even have a hel
 
 For example:
 
-```
+```m
 ..@@.@@@@.
 @@@.@.@.@@
 @@@@@.@.@@
@@ -29,7 +29,7 @@ The forklifts can only access a roll of paper if there are fewer than four rolls
 
 In this example, there are 13 rolls of paper that can be accessed by a forklift (marked with x):
 
-```
+```m
 ..xx.xx@x.
 x@@.@.@.@@
 @@@@@.x.@@
@@ -56,7 +56,7 @@ Starting with the same example as above, here is one way you could remove as man
 
 Initial state:
 
-```
+```m
 ..@@.@@@@.
 @@@.@.@.@@
 @@@@@.@.@@
@@ -71,7 +71,7 @@ Initial state:
 
 Remove 13 rolls of paper:
 
-```
+```m
 ..xx.xx@x.
 x@@.@.@.@@
 @@@@@.x.@@
@@ -86,7 +86,7 @@ x.x.@@@.x.
 
 Remove 12 rolls of paper:
 
-```
+```m
 .......x..
 .@@.x.x.@x
 x@@@@...@@
@@ -101,7 +101,7 @@ x.@@@@..x.
 
 Remove 7 rolls of paper:
 
-```
+```m
 ..........
 .x@.....x.
 .@@@@...xx
@@ -116,7 +116,7 @@ Remove 7 rolls of paper:
 
 Remove 5 rolls of paper:
 
-```
+```m
 ..........
 ..x.......
 .x@@@.....
@@ -131,7 +131,7 @@ Remove 5 rolls of paper:
 
 Remove 2 rolls of paper:
 
-```
+```m
 ..........
 ..........
 ..x@@.....
@@ -146,7 +146,7 @@ Remove 2 rolls of paper:
 
 Remove 1 roll of paper:
 
-```
+```m
 ..........
 ..........
 ...@@.....
@@ -161,7 +161,7 @@ Remove 1 roll of paper:
 
 Remove 1 roll of paper:
 
-```
+```m
 ..........
 ..........
 ...x@.....
@@ -176,7 +176,7 @@ Remove 1 roll of paper:
 
 Remove 1 roll of paper:
 
-```
+```m
 ..........
 ..........
 ....x.....
@@ -191,7 +191,7 @@ Remove 1 roll of paper:
 
 Remove 1 roll of paper:
 
-```
+```m
 ..........
 ..........
 ..........

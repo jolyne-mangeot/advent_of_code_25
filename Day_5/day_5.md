@@ -10,7 +10,7 @@ The Elves in the kitchen explain the situation: because of their complicated new
 
 The database operates on ingredient IDs. It consists of a list of fresh ingredient ID ranges, a blank line, and a list of available ingredient IDs. For example:
 
-```
+```m
 3-5
 10-14
 16-20
@@ -28,7 +28,7 @@ The fresh ID ranges are inclusive: the range `3-5` means that ingredient IDs `3`
 
 The Elves are trying to determine which of the available ingredient IDs are fresh. In this example, this is done as follows:
 
-```
+```m
 Ingredient ID 1 is spoiled because it does not fall into any range.
 Ingredient ID 5 is fresh because it falls into range 3-5.
 Ingredient ID 8 is spoiled.
@@ -51,7 +51,7 @@ So that they can stop bugging you when they get new inventory, the Elves would l
 
 Now, the second section of the database (the available ingredient IDs) is irrelevant. Here are the fresh ingredient ID ranges from the above example:
 
-```
+```m
 3-5
 10-14
 16-20
