@@ -6,13 +6,11 @@
 /*   By: jmangeot <jmangeot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 13:48:30 by jmangeot          #+#    #+#             */
-/*   Updated: 2025/12/15 11:37:45 by jmangeot         ###   ########.fr       */
+/*   Updated: 2025/12/15 19:11:26 by jmangeot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../utils/advent_of_code.h"
-
-// ! DOESN'T WORK ! //
 
 static size_t	get_tens_power(size_t power)
 {
@@ -27,14 +25,42 @@ static size_t	get_tens_power(size_t power)
 	return (ten);
 }
 
+static int	divide_id(size_t id, size_t len, size_t divider)
+{
+	size_t	*values;
+	size_t	temp;
+	int		result;
+
+	values = (size_t *)malloc(sizeof(size_t) * (len / divider));
+	temp = 0;
+	while (temp < (len / divider))
+	{
+		values[temp] = id
+			/ get_tens_power(len - (divider * (temp + 1)));
+		if (temp)
+			values[temp] %= get_tens_power(divider);
+		temp++;
+	}
+	temp = 0;
+	result = 1;
+	while (temp < (len / divider) - 1)
+	{
+		if (values[temp] != values[temp + 1])
+			result = 0;
+		if (!result)
+			break ;
+		temp++;
+	}
+	free(values);
+	return (result);
+}
+
 static int	is_invalid_id(size_t id)
 {
 	size_t	temp;
-	size_t	*values;
 	size_t	len;
 	int		result;
 
-	values = (size_t *)malloc(sizeof(size_t) * 2);
 	len = 1;
 	temp = id;
 	while (temp >= 10)
@@ -42,12 +68,19 @@ static int	is_invalid_id(size_t id)
 		temp /= 10;
 		len++;
 	}
-	if (len % 2 != 0)
-		return (0);
-	values[0] = id / get_tens_power(len / 2);
-	values[1] = id % get_tens_power(len / 2);
-	result = values[0] == values[1];
-	free(values);
+	temp = 1;
+	result = 0;
+	while (temp < len)
+	{
+		if (len % temp == 0)
+			result = divide_id(id, len, temp);
+		if (result)
+		{
+			ft_printf("divider : %lld, id : %lld\n", temp, id);
+			return(result);
+		}
+		temp++;
+	}
 	return (result);
 }
 
@@ -59,10 +92,7 @@ static size_t	browse_range(size_t id, size_t maximum)
 	while (id <= maximum)
 	{
 		if (is_invalid_id(id))
-		{
-			ft_printf("%lld\n", id);
 			count += id;
-		}
 		id++;
 	}
 	return (count);
@@ -73,18 +103,14 @@ static size_t	browse_ranges(char **ranges)
 	char	**range;
 	size_t	count;
 	size_t	index;
-	size_t	lens[2];
 
 	count = 0;
 	index = 0;
 	while (ranges[index])
 	{
 		range = ft_split(ranges[index], '-');
-		lens[0] = ft_strlen(range[0]);
-		lens[1] = ft_strlen(range[1]);
 		ft_printf("\n\n***\n%d\n***\n\n", index);
-		if (lens[0] != lens[1] || lens[0] % 2 == 0)
-			count += browse_range(ft_atoll(range[0]), ft_atoll(range[1]));
+		count += browse_range(ft_atoll(range[0]), ft_atoll(range[1]));
 		free(range[0]);
 		free(range[1]);
 		free(range);
