@@ -10,7 +10,7 @@ You explain your need to get further underground. "Well, you could at least take
 
 There are batteries nearby that can supply emergency power to the escalator for just such an occasion. The batteries are each labeled with their joltage rating, a value from 1 to 9. You make a note of their joltage ratings (your puzzle input). For example:
 
-```
+```m
 987654321111111
 811111111111119
 234234234234278
@@ -21,7 +21,7 @@ The batteries are arranged into banks; each line of digits in your input corresp
 
 You'll need to find the largest possible joltage each bank can produce. In the above example:
 
-```
+```m
 In 987654321111111, you can make the largest joltage possible, 98, by turning on the first two batteries.
 In 811111111111119, you can make the largest joltage possible by turning on the batteries labeled 8 and 9, producing 89 jolts.
 In 234234234234278, you can make 78 by turning on the last two batteries (marked 7 and 8).
@@ -44,7 +44,7 @@ The joltage output for the bank is still the number formed by the digits of the 
 
 Consider again the example from before:
 
-```
+```m
 987654321111111
 811111111111119
 234234234234278
@@ -53,7 +53,7 @@ Consider again the example from before:
 
 Now, the joltages are much larger:
 
-```
+```m
 In 987654321111111, the largest joltage can be found by turning on everything except some 1s at the end to produce 987654321111.
 In the digit sequence 811111111111119, the largest joltage can be found by turning on everything except some 1s, producing 811111111119.
 In 234234234234278, the largest joltage can be found by turning on everything except a 2 battery, a 3 battery, and another 2 battery near the start to produce 434234234278.
